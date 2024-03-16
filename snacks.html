@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Movie Night</title>
+  <link rel="icon" type="image/x-icon" href="assets/iconmapp.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/a4189ba6f3.js" crossorigin="anonymous"></script>
+  <script src="config.js"></script>
+</head>
+<!--ovo svojstvo data-bs-theme je kreirao bootstrap da su koristi tamna ili svijetla tema na stranici-->
+
+<body data-bs-theme="dark">
+  <!-----------------NAVBAR-------------------->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Movie Night Pro</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="movies.html">Movies</a>
+          </li>
+          <li id="lognav" class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="contact.html">Book</a></li>
+              <li><a class="dropdown-item" href="snacks.html">Snacks</a></li>
+              <li>
+                <a class="dropdown-item" href="pricing.html">Pricing</a>
+              </li>
+            </ul>
+          </li>
+          <li id="user-nav" class="nav-item dropdown">
+            <div class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="display:flex;">
+              <i class="fa-regular fa-user" id="user-icon"></i>
+              <p id="username-nav"></p>
+            </div>
+            <ul class="dropdown-menu">
+              <li><button onclick="logout()" class="dropdown-item" href="contact.html">Logout</button></li>
+
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-----------------SNACKS-------------------->
+  <div class="container mt-5">
+    <h1 class="text-center">CHOOSE YOUR SNACKS</h1>
+    <hr class="mb-4">
+  </div>
+
+  <div class="container">
+  <div class="row row-cols-md-2">
+  <div class="col mx-3 card mb-3 text-bg-dark border-warning" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4 d-flex align-items-center">
+        <img src="assets/kokice.jpeg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title fw-light"><strong>Regular salted popcorn</strong></h5>
+          <p class="card-text"><small class="text-body-secondary text-warning-emphasis"><em>$3 -regular pack <br> $6 -family pack</em></small></p>
+          <p class="card-text fw-light">Upgrade your movie night with our versatile and irresistible theater snack. Perfectly crafted to complement any film, it promises a delightful fusion of flavors and textures for an enhanced cinematic experience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    <div class="col mx-3 card mb-3 text-bg-dark border-warning" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4 d-flex align-items-center">
+          <img src="assets/kokice2.jpeg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title fw-light"><strong>Flavoured popcorn</strong></h5>
+            <p class="card-text"><small class="text-body-secondary text-warning-emphasis"><em>$4.5 -regular pack <br> $6.99 -family pack</em></small></p>
+            <p class="card-text fw-light">Upgrade your movie night with our versatile and irresistible theater snack. Perfectly crafted to complement any film, it promises a delightful fusion of flavors and textures for an enhanced cinematic experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col mx-3 card mb-3 text-bg-dark border-warning" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4 d-flex align-items-center">
+          <img src="assets/chips.jpeg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title fw-light"><strong>Plain salted chips</strong></h5>
+            <p class="card-text"><small class="text-body-secondary text-warning-emphasis"><em>$4 -regular pack <br> $7 -family pack</em></small></p>
+            <p class="card-text fw-light">Upgrade your movie night with our versatile and irresistible theater snack. Perfectly crafted to complement any film, it promises a delightful fusion of flavors and textures for an enhanced cinematic experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col mx-3 card mb-3 text-bg-dark border-warning" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4 d-flex align-items-center">
+          <img src="assets/nacho.jpeg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title fw-light"><strong>Plain nacho chips</strong></h5>
+            <p class="card-text"><small class="text-body-secondary text-warning-emphasis"><em>$3 -regular pack <br> $6.5 -family pack</em></small></p>
+            <p class="card-text fw-light">Upgrade your movie night with our versatile and irresistible theater snack. Perfectly crafted to complement any film, it promises a delightful fusion of flavors and textures for an enhanced cinematic experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col mx-3 card mb-3 text-bg-dark border-warning" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4 d-flex align-items-center">
+          <img src="assets/m&m.jpeg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title fw-light"><strong>Peanut M&Ms</strong></h5>
+            <p class="card-text"><small class="text-body-secondary text-warning-emphasis"><em>$2 -regular pack</em></small></p>
+            <p class="card-text fw-light">Upgrade your movie night with our versatile and irresistible theater snack. Perfectly crafted to complement any film, it promises a delightful fusion of flavors and textures for an enhanced cinematic experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col mx-3 card mb-3 text-bg-dark border-warning" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4 d-flex align-items-center">
+          <img src="assets/milka.jpeg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title fw-light"><strong>Milka alpine milk</strong></h5>
+            <p class="card-text"><small class="text-body-secondary text-warning-emphasis"><em>$7 -regular pack <br> $10 -large pack</em></small></p>
+            <p class="card-text fw-light">Upgrade your movie night with our versatile and irresistible theater snack. Perfectly crafted to complement any film, it promises a delightful fusion of flavors and textures for an enhanced cinematic experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+  <!-----------------FOOTER-------------------->
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-2 mb-2">
+        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+        <li class="nav-item"><a href="pricing.html" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"></a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-body-secondary">Contact us to schedule
+            your movie
+            night</a></li>
+      </ul>
+      <p class="text-center text-body-secondary">© 2024 Movie Night Pro, Inc</p>
+    </footer>
+  </div>
+
+  <!------------------TOAST-------------------->
+  <div class="toast-container position-fixed bottom-0 start-0 p-6">
+    <div class="toast" id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-body">
+        <div class="d-flex gap-4">
+          <span><i class="fa-solid fa-circle-check fa-lg icon-success"></i></span>
+          <div class="d-flex flex-column flex-grow-1 gap-2">
+            <div class="d-flex align-items-center">
+              <span class="fw-semibold">Error</span>
+              <button type="button" class="btn-close btn-close-sm ms-auto" data-bs-dismiss="toast"
+                aria-label="Close"></button>
+            </div>
+            <span id="error-message"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="user-managment.js"></script>
+  <script src="script.js"></script>
+  <!--Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

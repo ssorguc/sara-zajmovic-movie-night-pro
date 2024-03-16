@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Movie Night</title>
+  <link rel="icon" type="image/x-icon" href="assets/iconmapp.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/a4189ba6f3.js" crossorigin="anonymous"></script>
+  <script src="config.js"></script>
+</head>
+<!--ovo svojstvo data-bs-theme je kreirao bootstrap da su koristi tamna ili svijetla tema na stranici-->
+
+<body data-bs-theme="dark">
+  <!-----------------NAVBAR-------------------->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Movie Night Pro</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="movies.html">Movies</a>
+          </li>
+          <li id="lognav" class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="contact.html">Book</a></li>
+              <li><a class="dropdown-item" href="snacks.html">Snacks</a></li>
+              <li>
+                <a class="dropdown-item" href="pricing.html">Pricing</a>
+              </li>
+            </ul>
+          </li>
+          <li id="user-nav" class="nav-item dropdown">
+            <div class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="display:flex;">
+              <i class="fa-regular fa-user" id="user-icon"></i>
+              <p id="username-nav"></p>
+            </div>
+            <ul class="dropdown-menu">
+              <li><button onclick="logout()" class="dropdown-item" href="contact.html">Logout</button></li>
+
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-----------------PRICING-CARDS------------------->
+  <div class="container py-3">
+    <header>
+      <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal text-body-emphasis">Pricing</h1>
+        <p class="fs-5 text-body-secondary">We believe in making your movie nights unforgettable. Select your preferred
+          package, add personalized touches, and let us bring the magic of the cinema to your home. Book your package
+          now and transform your living room into a private movie haven!</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <a href="#basic" class="linijca"><div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Ciné Starter</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$49.99<small class="text-body-secondary fw-light">/mo</small>
+              </h1>
+              <p>The "Ciné Starter" package is perfect for a cozy movie night with your loved ones. Enjoy a curated
+                selection of blockbuster movies with our portable screening setup. The package includes:</p>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>-Portable projector and screen delivery</li>
+                <li>-Movie selection from our extensive library</li>
+                <li>-Standard snack package (popcorn, candy, and soft drinks)</li>
+                <li>-Delivery and setup included</li>
+              </ul>
+
+            </div>
+          </div>
+        </div></a>
+        <a href="#silver" class="linijca"><div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Ciné Deluxe</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$79.99<small class="text-body-secondary fw-light">/mo</small>
+              </h1>
+              <p>The "Ciné Deluxe" package is designed for those seeking a touch of luxury in their home cinema
+                experience. Enjoy high-quality visuals and an enhanced snack selection. The package includes:</p>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>-High-definition projector and screen delivery</li>
+                <li>-Expanded movie library with exclusive releases</li>
+                <li>-Deluxe snack package (gourmet popcorn, assorted chocolates, and beverages)</li>
+                <li>-Delivery, setup, and technical support included</li>
+              </ul>
+
+            </div>
+          </div>
+        </div></a>
+        <a href="#premium" class="linijca"><div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-warning">
+            <div class="card-header py-3 text-bg-warning border-warning">
+              <h4 class="my-0 fw-normal">Ciné Premiere</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$129.99<small class="text-body-secondary fw-light">/mo</small>
+              </h1>
+              <ul class="list-unstyled mt-4 mb-4">
+                <li>-State-of-the-art 4K projector and premium screen delivery</li>
+                <li>-Access to an exclusive movie catalog, including early releases</li>
+                <li>-Gourmet snack package (premium popcorn flavors, artisanal chocolates, and a selection of beverages)
+                </li>
+                <li>-Professional setup by our cinema experts, ensuring optimal audio-visual experience</li>
+                <li>-Complimentary cinema-style seating</li>
+              </ul>
+
+            </div>
+          </div>
+        </div></a>
+      </div>
+
+      <hr>
+  <!-----------------PRICING-DETAILS------------------->
+    <div class="container py-4" id="basic">
+      <h2 class="fw-normal">1. Basic Package - "Ciné Starter"  <small class="text-body-secondary fw-light fs-3 fw-medium"><sup>Price: $49.99</sup></small></h2>
+      <p class="fw-light">The "Ciné Starter" package is perfect for a cozy movie night with your loved ones. Enjoy a curated selection of blockbuster movies with our portable screening setup.<br> The package includes:</p>
+      <ul class="fw-light">
+        <li>Portable projector and screen delivery</li>
+        <li>Movie selection from our extensive library</li>
+        <li>Standard snack package (popcorn, candy, and soft drinks)</li>
+        <li>Delivery and setup included</li>
+      </ul>
+      <p class="fw-light"><strong>Upgrade options:</strong></p>
+      <ul class="fw-light">
+        <li>Add a larger screen for an immersive experience ($10 extra)</li>
+        <li>Choose from our premium snack options</li>
+      </ul>
+    </div> 
+      
+<hr>
+      
+      <div class="container py-3" id="silver">
+        <h2 class="fw-normal">2. Silver Package - "Ciné Deluxe"  <small class="text-body-secondary fw-light fs-3 fw-medium"><sup>Price: $79.99</sup></small></h2>
+        <p class="fw-light">The "Ciné Deluxe" package is designed for those seeking a touch of luxury in their home cinema experience. Enjoy high-quality visuals and an enhanced snack selection.<br> The package includes:</p>
+        <ul class="fw-light">
+          <li>High-definition projector and screen delivery</li>
+          <li>Expanded movie library with exclusive releases</li>
+          <li>Deluxe snack package (gourmet popcorn, assorted chocolates, and beverages)</li>
+          <li>Delivery, setup, and technical support included</li>
+        </ul>
+        <p class="fw-light"><strong>Upgrade options:</strong></p>
+        <ul class="fw-light">
+          <li>Opt for a cinema-style seating arrangement with our comfortable chairs ($20 extra)</li>
+          <li>Choose a larger screen size for a more cinematic feel ($15 extra)</li>
+        </ul>
+      </div> 
+
+      <hr>
+
+      <div class="container py-3" id="premium">
+        <h2 class="fw-normal text-warning">3. Premium Package - "Ciné Premiere"  <small class="text-body-secondary fw-light fs-3 fw-medium"><sup>Price: $129.99</sup></small></h2>
+        <p class="fw-light">The "Ciné Premiere" package is the epitome of a VIP cinema experience at your home. Indulge in top-of-the-line equipment, an extensive movie catalog, and a premium snack selection.<br> The package includes:</p>
+        <ul class="fw-light">
+          <li>State-of-the-art 4K projector and premium screen delivery</li>
+          <li>Access to an exclusive movie catalog, including early releases</li>
+          <li>Gourmet snack package (premium popcorn flavors, artisanal chocolates, and a selection of beverages)</li>
+          <li>Professional setup by our cinema experts, ensuring optimal audio-visual experience</li>
+          <li>Complimentary cinema-style seating</li>
+        </ul>
+        <p class="fw-light"><strong>Upgrade options:</strong></p>
+        <ul class="fw-light">
+          <li>Elevate your experience with our VIP concierge service ($30 extra)</li>
+          <li>Choose a larger screen size for a truly cinematic atmosphere ($25 extra)</li>
+        </ul>
+      </div> 
+    
+      
+  <!-----------------FOOTER-------------------->
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-2 mb-2">
+        <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+        <li class="nav-item"><a href="pricing.html" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"></a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-body-secondary">Contact us to schedule your movie
+            night</a></li>
+      </ul>
+      <p class="text-center text-body-secondary">© 2024 Movie Night Pro, Inc</p>
+    </footer>
+  </div>
+
+  <!------------------TOAST-------------------->
+  <div class="toast-container position-fixed bottom-0 start-0 p-6">
+    <div class="toast" id="liveToast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-body">
+        <div class="d-flex gap-4">
+          <span><i class="fa-solid fa-circle-check fa-lg icon-success"></i></span>
+          <div class="d-flex flex-column flex-grow-1 gap-2">
+            <div class="d-flex align-items-center">
+              <span class="fw-semibold">Error</span>
+              <button type="button" class="btn-close btn-close-sm ms-auto" data-bs-dismiss="toast"
+                aria-label="Close"></button>
+            </div>
+            <span id="error-message"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="user-managment.js"></script>
+  <script src="script.js"></script>
+  <!--Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
